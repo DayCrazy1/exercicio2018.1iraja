@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label >valor</label> <br>
+    <input type="text" name="n1" id="n1">  <br>      
+    <input type="text" name="n2" id="n2">  <br>
+    <input type="text" name="n3" id="n3">  <br>         
+    <button onclick="verificar()">ok</button> 
+    <div id="saida"></div>
+
+</body>
+</html>
+<script>
+    function verificar(){
+        var A = parseInt(document.getElementById("n1").value);
+        var B = parseInt(document.getElementById("n2").value);
+        var C = parseInt(document.getElementById("n3").value);
+        var MAIOR = 0
+        var MENOR = 0
+
+        if (A>B){
+            MAIOR=A;
+            MENOR=B;
+        }else{
+            MAIOR=B;
+            MENOR=A;
+        }
+        if(C>MAIOR){
+            MAIOR = C
+        }
+        if(MENOR>C){
+            MENOR = C
+        }
+
+        document.getElementById("saida").innerHTML= "MAIOR "+MAIOR+".<BR> "+" MENOR "+MENOR+".";
+        
+
+}
+
+</script>
