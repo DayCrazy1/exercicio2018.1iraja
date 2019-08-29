@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"> 
+    </script>
+</head>
+<body ng-app="ex62">
+    <div ng-controller="ctrl62">    
+        <label >Digite o valor</label>
+        <input type="number" ng-model="n1">
+        <input type="number" ng-model="n2">
+        <input type="number" ng-model="op">
+    {{ saida(n1,n2,op) }}
+    </div>
+</body>
+</html>
+
+<script>
+    var app = angular.module("ex62",[])
+    app.controller("ctrl62", function($scope){
+       $scope.saida=function(n1,n2,op){
+           if (op==1){
+               return  n1+n2 ;
+           }
+          
+       } 
+
+    })
+</script>
