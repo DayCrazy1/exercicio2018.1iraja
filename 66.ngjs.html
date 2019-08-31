@@ -8,19 +8,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"> 
     </script>
 </head>
-<body ng-app="ex65">
-    <div ng-controller="ctrl65">    
+<body ng-app="ex66">
+    <div ng-controller="ctrl66">    
         <label >Digite o valor</label>
-        <input type="number" ng-model="sl">
-        <input type="number" ng-model="fc">
-     {{ saida ( 0                                                                                 ,fc) }}
+        <input type="number" ng-model="gr1">
+        <input type="number" ng-model="gr2">
+        <input type="number" ng-model="gr3">
+
+     {{ saida ( gr1,gr2,gr3) }}
     </div>
 </body>
 </html>
 
 <script>
-    var app = angular.module("ex65",[])
-    app.controller("ctrl65", function($scope){
+    var app = angular.module("ex66",[])
+    app.controller("ctrl66", function($scope){
        $scope.saida=function(fc,sl){
            if (fc<=(5*sl)){
                return "financiabmento aceito";

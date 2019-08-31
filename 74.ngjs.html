@@ -5,25 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"> 
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
 </head>
-<body ng-app="ex65">
-    <div ng-controller="ctrl65">    
+<body ng-app="ex74">
+    <div ng-controller="ctrl74">    
         <label >Digite o valor</label>
-        <input type="number" ng-model="sl">
-        <input type="number" ng-model="fc">
-          {{ saida (sl,fc) }}
+        <input type="text" name="valor" ng-model="x">
+    {{ saida(x) }} {{ x }}
     </div>
 </body>
 </html>
-
 <script>
-    var app = angular.module("ex65",[])
-    app.controller("ctrl65", function($scope){
-       $scope.saida=function(fc,sl){
-           if (fc<=(5*sl)){
-               return "financiabmento aceito";
+      var app = angular.module("ex74",[])
+    app.controller("ctrl74", function($scope){
+       $scope.saida=function(x){
+           for (x=1;x<=100;x++){
+               if (x%10=<0){
+                   T=x
              }
              return "financiabmento negado";
            }
